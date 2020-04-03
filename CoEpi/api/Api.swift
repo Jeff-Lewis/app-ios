@@ -50,8 +50,7 @@ class ApiImpl: Api {
     }
 
     func getCenKeys() -> Single<[String]> {
-        let unixDT = Int(currentAttemptedExposureCheck.timeIntervalSince1970)
-        let stringURL = "https://coepi.wolk.com:8080/cenkeys/\(unixDT)"
+        let stringURL = "https://coepi.wolk.com:8080/cenkeys/\(Int(currentAttemptedExposureCheck.timeIntervalSince1970))"
         return json(.get, stringURL).asSingle().map { result in
             result as! [String]
         }

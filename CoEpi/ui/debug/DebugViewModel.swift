@@ -10,7 +10,6 @@ class DebugViewModel {
 
 
         //TESTING NETWORK
-        print ("Testing Networking at lines 14 - 21 in DebugViewModel.swift")
         api.getCenKeys()
             .subscribe { print($0) }
         
