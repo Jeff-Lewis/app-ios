@@ -14,7 +14,7 @@ class DebugViewModel {
         api.getCenKeys()
             .subscribe { print($0) }
         
-        api.getCenReport(cenKey: CENKey(cenKey: "17FA287EBE6B42A3859A60C12CF71394"))
+        api.getCenReport(cenKey: CENKey(cenKey: "17FA287EBE6B42A3859A60C12CF71394"), id: "1", report: "Report1")
             .subscribe { print($0) }
 
         api.postCenReport(cenReport: CENReport(id: "80d2910e783ab87837b444c224a31c9745afffaaacd4fb6eacf233b5f30e3140", report: "c2V2ZXJlIGZldmVyLGNvdWdoaW5nLGhhcmQgdG8gYnJlYXRoZQ==", timestamp: Int64(Date().timeIntervalSince1970)))
